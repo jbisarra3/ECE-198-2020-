@@ -1,5 +1,6 @@
 #include "pitches.h"
 int keyNotes[] = {2,3,4,5,6,7,8,9};
+int speaker = 11;
 
 int c[] = {N_C5}; //Plays C Note
 int d[] = {N_D5}; //Plays D Note
@@ -27,50 +28,45 @@ void loop() {
   for(int i = 0; i < 8; i++)
   {
       keyPress[i] = digitalRead(keyNotes[i]);
-      char buf[20];
-      sprintf(buf,"%d: %d ", i, keyPress[i]);  //format two ints into character array
-      Serial.print(buf);
-   
   }
-  Serial.println();
   if ((keyPress[0]) == HIGH) { //Reads button state when pressed
     for (int Note = 0; Note < 1; Note++) {
-      tone(11, c[Note], duration); //Plays note on pin 6, where the Buzzer is connected (change it if you connected it on another pin)
+      tone(speaker, c[Note], duration); //Plays note on pin 6, where the Buzzer is connected (change it if you connected it on another pin)
     }
   }
   if ((keyPress[1]) == HIGH) {
     for (int Note = 0; Note < 1; Note++) {
-      tone(11, d[Note], duration); 
+      tone(speaker, d[Note], duration); 
     }
   }
   if ((keyPress[2]) == HIGH) {
     for (int Note = 0; Note < 1; Note++) {
-      tone(11, e[Note], duration);
+      tone(speaker, e[Note], duration);
     }
   }
   if ((keyPress[3]) == HIGH) {
     for (int Note = 0; Note < 1; Note++) {
-      tone(11, f[Note], duration);
+      tone(speaker, f[Note], duration);
     }
   }
   if ((keyPress[4]) == HIGH) {
     for (int Note = 0; Note < 1; Note++) {
-      tone(11, g[Note], duration);
+      tone(speaker, g[Note], duration);
     }
   }
   if ((keyPress[5]) == HIGH) {
     for (int Note = 0; Note < 1; Note++) {
-      tone(11, a[Note], duration);
+      tone(speaker, a[Note], duration);
     }
   }
   if ((keyPress[6]) == HIGH) {
     for (int Note = 0; Note < 1; Note++) {
-      tone(11, b[Note], duration);
+      tone(speaker, b[Note], duration);
     }
   }
   if ((keyPress[7]) == HIGH) {
      for (int Note = 0; Note < 1; Note++) {
-      tone(11, c2[Note], duration);
+      tone(speaker, c2[Note], duration);
     } 
   } 
   delay(5);
