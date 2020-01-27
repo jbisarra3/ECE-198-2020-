@@ -29,9 +29,11 @@ void loop() {
   {
       keyPress[i] = digitalRead(keyNotes[i]);
   }
-  if ((keyPress[0]) == HIGH) { //Reads button state when pressed
+  
+  
+  if ((keyPress[0]) == HIGH) { //Reads button state when pressed, add 2 to the array index (keypress[n]) to find pin
     for (int Note = 0; Note < 1; Note++) {
-      tone(speaker, c[Note], duration); //Plays note on pin 6, where the Buzzer is connected (change it if you connected it on another pin)
+      tone(speaker, c[Note], duration); //Plays note on pin 2, where the Buzzer is connected (change it if you connected it on another pin)
     }
   }
   if ((keyPress[1]) == HIGH) {
