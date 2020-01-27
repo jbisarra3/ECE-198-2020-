@@ -1,5 +1,5 @@
 #include "pitches.h"
-int keyNotes[] = {2,3,4,5,6,7,8,9};
+int keyNotes[] = {2,3,4,5,6,7,8,9}; //use pins 2,3,4,5,6,7,8,9
 int speaker = 11;
 
 int c[] = {N_C5}; //Plays C Note
